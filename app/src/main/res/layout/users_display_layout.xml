@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/users_profile_images"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/profile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/user_profile_name"
+        android:layout_width="91dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="40dp"
+        android:text="User name"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/users_profile_images"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_online_statues"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="48dp"
+        android:visibility="invisible"
+        android:src="@drawable/online"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_statues"
+        android:layout_width="105dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="193dp"
+
+        android:text="User statues"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/users_profile_images"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
