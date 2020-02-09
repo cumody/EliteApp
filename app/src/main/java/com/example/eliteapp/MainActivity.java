@@ -190,9 +190,6 @@ public class MainActivity extends AppCompatActivity {
     private void SendusertoSettingsActivity() {
 
         Intent settings_intent = new Intent(MainActivity.this,SettingsActivity.class);
-        settings_intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        finish();
-
         startActivity(settings_intent);
     }
     private void SendusertoLoginActivity() {

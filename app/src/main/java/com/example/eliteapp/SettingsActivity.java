@@ -3,6 +3,7 @@ package com.example.eliteapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -46,6 +47,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static final int GALLERY_PICK = 1;
     private StorageReference UserProfileImagesRef;
     private ProgressBar loadingbar;
+    private Toolbar mtoolbar;
 
 
 
@@ -58,6 +60,13 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         Inatializefields();
+
+        mtoolbar = findViewById(R.id.settings_toolbar);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("Settings");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
         mAuth = FirebaseAuth.getInstance();
         currentuserId = mAuth.getCurrentUser().getUid();
@@ -212,7 +221,7 @@ public class SettingsActivity extends AppCompatActivity {
             profileMap.put("name", setUsername);
             profileMap.put("statues", setUserstatues);
 
-            Rootref.child("Users").child(currentuserId).setValue(profileMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            Rootref.child("Users").child(currentuserId).updateChildren(profileMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {

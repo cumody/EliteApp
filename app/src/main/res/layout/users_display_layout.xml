@@ -57,5 +57,38 @@
         app:layout_constraintStart_toEndOf="@+id/users_profile_images"
         app:layout_constraintTop_toBottomOf="@+id/user_profile_name" />
 
+    <Button
+        android:id="@+id/request_accept_btn"
+
+        android:layout_width="49dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="249dp"
+        android:background="#F44336"
+        android:text="Accept"
+        android:textColor="#FFF"
+        android:textSize="7sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/users_profile_images"
+        app:layout_constraintTop_toBottomOf="@+id/user_statues" />
+
+
+    <Button
+        android:id="@+id/request_cancel_btn"
+        android:layout_width="49dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#8BC34A"
+        android:text="Cancel"
+        android:textColor="#FFF"
+        android:textSize="7sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/request_accept_btn"
+        app:layout_constraintTop_toBottomOf="@+id/user_statues" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
